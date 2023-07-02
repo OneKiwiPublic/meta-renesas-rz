@@ -8,10 +8,16 @@ COMPATIBLE_MACHINE_rzg2l = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc
 COMPATIBLE_MACHINE_rzg2h = "(ek874|hihope-rzg2n|hihope-rzg2m|hihope-rzg2h)"
 COMPATIBLE_MACHINE_rzfive = "(smarc-rzfive|rzfive-dev)"
 
+#KERNEL_URL = " \
+#    git://github.com/renesas-rz/rz_linux-cip.git"
+#BRANCH = "${@oe.utils.conditional("IS_RT_BSP", "1", "rz-5.10-cip17-rt7", "rz-5.10-cip17",d)}"
+#SRCREV = "${@oe.utils.conditional("IS_RT_BSP", "1", "0f6cb6312a1a6f22fba03705c1b9816b7d27cf5b", "13dea4598e61893e75eae1c1887fa51ea6b22a07",d)}"
+
 KERNEL_URL = " \
-    git://github.com/renesas-rz/rz_linux-cip.git"
-BRANCH = "${@oe.utils.conditional("IS_RT_BSP", "1", "rz-5.10-cip17-rt7", "rz-5.10-cip17",d)}"
+    git://github.com/OneKiwiPublic/linux-renesas-rz.git"
+BRANCH = "${@oe.utils.conditional("IS_RT_BSP", "1", "rz-5.10-cip17-rt7", "onekiwi-rz-5.10-cip17",d)}"
 SRCREV = "${@oe.utils.conditional("IS_RT_BSP", "1", "0f6cb6312a1a6f22fba03705c1b9816b7d27cf5b", "13dea4598e61893e75eae1c1887fa51ea6b22a07",d)}"
+
 
 SRC_URI = "${KERNEL_URL};protocol=https;nocheckout=1;branch=${BRANCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"

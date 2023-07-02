@@ -12,14 +12,21 @@ inherit deploy
 
 S = "${WORKDIR}/git"
 
-BRANCH = "v2.7/rz"
+#BRANCH = "v2.7/rz"
+BRANCH = "onekiwi-v2.7-rz"
 BRANCH_mbedtls = "mbedtls-2.28"
 
+#SRC_URI = " \
+#	git://github.com/renesas-rz/rzg_trusted-firmware-a.git;branch=${BRANCH};protocol=https \
+#	git://github.com/ARMmbed/mbedtls.git;branch=${BRANCH_mbedtls};name=mbedtls;destsuffix=mbedtls \
+#"
+
 SRC_URI = " \
-	git://github.com/renesas-rz/rzg_trusted-firmware-a.git;branch=${BRANCH};protocol=https \
+	git://github.com/OneKiwiPublic/atf-renesas-rz;branch=${BRANCH};protocol=https \
 	git://github.com/ARMmbed/mbedtls.git;branch=${BRANCH_mbedtls};name=mbedtls;destsuffix=mbedtls \
 "
 
+#SRCREV = "203c78323b50059ea38eceb09f6bfda5d5934b55"
 SRCREV = "203c78323b50059ea38eceb09f6bfda5d5934b55"
 SRCREV_mbedtls = "dd79db10014d85b26d11fe57218431f2e5ede6f2"
 
