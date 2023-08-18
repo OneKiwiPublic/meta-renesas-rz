@@ -3,14 +3,14 @@ DESCRIPTION = "Linux kernel for the RZG2 based board"
 require recipes-kernel/linux/linux-yocto.inc
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}/:"
-COMPATIBLE_MACHINE_rzg2l = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|rzg2ul-dev|smarc-rzv2l|rzv2l-dev)"
+COMPATIBLE_MACHINE_rzg2l = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|rzg2ul-dev|smarc-rzv2l|rzv2l-dev|renesas-rzg2l-evk)"
 COMPATIBLE_MACHINE_rzg2h = "(ek874|hihope-rzg2n|hihope-rzg2m|hihope-rzg2h)"
 COMPATIBLE_MACHINE_rzfive = "(smarc-rzfive|rzfive-dev)"
 
 KERNEL_URL = " \
-    git://github.com/renesas-rz/rz_linux-cip.git"
-BRANCH = "${@oe.utils.conditional("IS_RT_BSP", "1", "rz-5.10-cip22-rt9", "rz-5.10-cip22",d)}"
-SRCREV = "${@oe.utils.conditional("IS_RT_BSP", "1", "078913fa6722b57d83aafed74ca6dd7f16cd4698", "4f3d2d21ad698667c9ea6331923612effab4e1c9",d)}"
+    git://github.com/OneKiwiPublic/linux-renesas-rz.git"
+BRANCH = "${@oe.utils.conditional("IS_RT_BSP", "1", "rz-5.10-cip22-rt9", "onekiwi-bsp-3.0.3-rz-5.10-cip22",d)}"
+SRCREV = "${@oe.utils.conditional("IS_RT_BSP", "1", "078913fa6722b57d83aafed74ca6dd7f16cd4698", "50c7d24d37794a52a740ed9c1e2c14bb8d192327",d)}"
 
 SRC_URI = "${KERNEL_URL};protocol=https;nocheckout=1;branch=${BRANCH}"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"

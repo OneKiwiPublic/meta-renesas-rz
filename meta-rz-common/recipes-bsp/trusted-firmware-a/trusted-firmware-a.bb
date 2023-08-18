@@ -12,21 +12,21 @@ inherit deploy
 
 S = "${WORKDIR}/git"
 
-BRANCH = "v2.7/rz"
+BRANCH = "onekiwi-bsp-3.0.3-v2.7/rz"
 BRANCH_mbedtls = "mbedtls-2.28"
 
 SRC_URI = " \
-	git://github.com/renesas-rz/rzg_trusted-firmware-a.git;branch=${BRANCH};protocol=https \
+	git://github.com/OneKiwiPublic/atf-renesas-rz.git;branch=${BRANCH};protocol=https \
 	git://github.com/ARMmbed/mbedtls.git;branch=${BRANCH_mbedtls};name=mbedtls;destsuffix=mbedtls \
 "
 
-SRCREV = "203c78323b50059ea38eceb09f6bfda5d5934b55"
+SRCREV = "ca15d76fce9dc7800998d39c728ddce8567afa2b"
 SRCREV_mbedtls = "dd79db10014d85b26d11fe57218431f2e5ede6f2"
 
 PV = "v2.7+git"
 
 COMPATIBLE_MACHINE_rzg2h = "(ek874|hihope-rzg2m|hihope-rzg2n|hihope-rzg2h)"
-COMPATIBLE_MACHINE_rzg2l = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|rzg2ul-dev|smarc-rzv2l|rzv2l-dev)"
+COMPATIBLE_MACHINE_rzg2l = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|rzg2ul-dev|smarc-rzv2l|rzv2l-dev|renesas-rzg2l-evk)"
 
 PLATFORM ?= "rzg"
 

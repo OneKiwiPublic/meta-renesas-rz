@@ -2,6 +2,12 @@ require include/rzg2l-security-config.inc
 inherit python3native
 
 # For RZ/G2L Series
+
+PLATFORM_renesas-rzg2l-evk = "g2l"
+EXTRA_FLAGS_renesas-rzg2l-evk = "BOARD=renesas-rzg2l-evk"
+FLASH_ADDRESS_BL2_BP_renesas-rzg2l-evk = "00000"
+FLASH_ADDRESS_FIP_renesas-rzg2l-evk = "1D200"
+
 PLATFORM_smarc-rzg2l = "g2l"
 EXTRA_FLAGS_smarc-rzg2l = "BOARD=smarc_2"
 PMIC_EXTRA_FLAGS_smarc-rzg2l = "BOARD=smarc_pmic_2"
