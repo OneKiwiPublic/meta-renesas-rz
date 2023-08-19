@@ -34,7 +34,8 @@ do_compile() {
 		BOARD="RZV2L_SMARC";
 		PMIC_BOARD="RZV2L_SMARC_PMIC";
 	elif [ "${MACHINE}" = "renesas-rzg2l-evk" ]; then
-		BOARD="RENESAS_RZG2L_EVK";
+		BOARD="RZG2L_SMARC";
+        PMIC_BOARD="RZG2L_SMARC_PMIC";
 	elif [ "${MACHINE}" = "rzv2l-dev" ]; then
 		BOARD="RZV2L_15MMSQ_DEV";
         fi
