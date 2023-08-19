@@ -4,11 +4,11 @@ PV = "1.06+git${SRCPV}"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-FLASH_WRITER_URL = "git://github.com/renesas-rz/rzg2_flash_writer"
+FLASH_WRITER_URL = "git://github.com/OneKiwiPublic/rzg2_flash_writer"
 BRANCH = "rz_g2l"
 
 SRC_URI = "${FLASH_WRITER_URL};branch=${BRANCH}"
-SRCREV = "ff167b676547f3997906c82c9be504eb5cff8ef0"
+SRCREV = "356aa2075a1e8f9a4826b46fcf4002169738606a"
 
 inherit deploy
 #require include/provisioning.inc
@@ -34,8 +34,7 @@ do_compile() {
 		BOARD="RZV2L_SMARC";
 		PMIC_BOARD="RZV2L_SMARC_PMIC";
 	elif [ "${MACHINE}" = "renesas-rzg2l-evk" ]; then
-		BOARD="RZG2L_SMARC";
-        PMIC_BOARD="RZG2L_SMARC_PMIC";
+		BOARD="RENESAS_RZG2L_EVK";
 	elif [ "${MACHINE}" = "rzv2l-dev" ]; then
 		BOARD="RZV2L_15MMSQ_DEV";
         fi
