@@ -5,7 +5,7 @@ inherit python3native
 
 PLATFORM_renesas-rzg2l-evk = "g2l"
 EXTRA_FLAGS_renesas-rzg2l-evk = "BOARD=renesas-rzg2l-evk"
-#PMIC_EXTRA_FLAGS_renesas-rzg2l-evk = "BOARD=renesas-rzg2l-evk"
+PMIC_EXTRA_FLAGS_renesas-rzg2l-evk = "BOARD=renesas-rzg2l-evk"
 FLASH_ADDRESS_BL2_BP_renesas-rzg2l-evk = "00000"
 FLASH_ADDRESS_FIP_renesas-rzg2l-evk = "1D200"
 
