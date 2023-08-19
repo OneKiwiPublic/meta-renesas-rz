@@ -23,7 +23,7 @@ SRC_URI += " \
 	file://0001-hw_get_random_bytes-SUPPORT.patch \
 "
 
-COMPATIBLE_MACHINE = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|smarc-rzv2l|rzv2l-dev)"
+COMPATIBLE_MACHINE = "(smarc-rzg2l|rzg2l-dev|smarc-rzg2lc|rzg2lc-dev|smarc-rzg2ul|smarc-rzv2l|rzv2l-dev|renesas-rzg2l-evk)"
 
 PLATFORM = "rz"
 PLATFORM_FLAVOR_smarc-rzg2l = "g2l_smarc_2"
@@ -33,6 +33,7 @@ PLATFORM_FLAVOR_rzg2lc-dev = "g2l_dev13_1"
 PLATFORM_FLAVOR_smarc-rzg2ul = "g2ul_smarc"
 PLATFORM_FLAVOR_smarc-rzv2l = "g2l_smarc_4"
 PLATFORM_FLAVOR_rzv2l-dev = "g2l_dev15_4"
+PLATFORM_FLAVOR_renesas-rzg2l-evk = "g2l_smarc_2"
 
 DEPENDS = " \
 	python3-pyelftools-native python3-cryptography-native python3-pycryptodome-native secprv-native \

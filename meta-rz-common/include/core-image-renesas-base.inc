@@ -17,6 +17,11 @@ update_issue() {
       BSP_SOC="RZG2L"
       BSP_BOARD="RZG2L-SMARC-EVK"
       ;;
+    case "${MACHINE}" in
+    renesas-rzg2l-evk)
+      BSP_SOC="RZG2L"
+      BSP_BOARD="RENESAS-RZG2L-EVK"
+      ;;
     rzg2l-dev)
       BSP_SOC="RZG2L"
       BSP_BOARD="RZG2L-DEV"

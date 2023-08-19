@@ -12,12 +12,13 @@ DEPENDS = " \
 	${@oe.utils.conditional("TRUSTED_BOARD_BOOT", "1", "python3-pycryptodome-native python3-pycryptodomex-native secprv-native bootparameter-native", "",d)} \
 "
 
-COMPATIBLE_MACHINE = "(smarc-rzg2l|smarc-rzg2lc|smarc-rzg2ul|smarc-rzv2l)"
+COMPATIBLE_MACHINE = "(smarc-rzg2l|smarc-rzg2lc|smarc-rzg2ul|smarc-rzv2l|renesas-rzg2l-evk)"
 
 BOARD_smarc-rzg2l      = "RZG2L_SMARC"
 BOARD_smarc-rzg2lc     = "RZG2LC_SMARC"
 BOARD_smarc-rzg2ul     = "RZG2UL_SMARC"
 BOARD_smarc-rzv2l      = "RZV2L_SMARC"
+BOARD_renesas-rzg2l-evk = "RENESAS_RZG2L_EVK"
 
 PMIC_BOARD_smarc-rzg2l = "RZG2L_SMARC_PMIC"
 PMIC_BOARD_smarc-rzv2l = "RZV2L_SMARC_PMIC"
