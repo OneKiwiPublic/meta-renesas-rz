@@ -8,7 +8,7 @@ FLASH_WRITER_URL = "git://github.com/OneKiwiPublic/rzg2_flash_writer"
 BRANCH = "rz_g2l"
 
 SRC_URI = "${FLASH_WRITER_URL};branch=${BRANCH}"
-SRCREV = "356aa2075a1e8f9a4826b46fcf4002169738606a"
+SRCREV = "4dc08d7122aec3184cb348b454903b871b9eb316"
 
 inherit deploy
 #require include/provisioning.inc
